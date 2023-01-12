@@ -1,4 +1,5 @@
 import React from 'react';
+import './BannerItem.css';
 
 const Banneritem = ({ slide }) => {
     const { image, id, prev, next } = slide;
@@ -6,7 +7,7 @@ const Banneritem = ({ slide }) => {
 
         <div id={`slide${id}`} className="carousel-item relative w-full">
             <div className='Carousel'>
-                <img src={image} alt="" className="w-full" />
+                <img src={image} alt="" className="w-full rounded-xl" />
             </div>
             <div className="absolute flex justify-end transform -translate-y-1/2 left-24  top-1/4">
                 <h1 className='text-6xl font-bold text-white'>
@@ -25,11 +26,6 @@ const Banneritem = ({ slide }) => {
             <div className="absolute w-2/5 flex justify-start    transform -translate-y-1/2 left-24  top-3/4">
                 <button className="btn btn-warning mr-5">Discover More</button>
                 <button class="btn btn-outline ">Latest Project</button>
-
-
-
-
-
             </div>
             <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
                 <a href={`#slide${prev}`} className="btn btn-circle mr-5">❮</a>
